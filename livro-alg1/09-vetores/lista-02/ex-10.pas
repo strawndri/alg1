@@ -1,81 +1,75 @@
-program exercito;
-type
-    vetor = array[1..20] of longint;
-
+program numeros_na_base_B;
+type vetor = array[1..200] of longint;
 var
-    regimentos, status: vetor;
-    i, semana, enviado: longint;
-
-procedure inicializar_regimentos(var regimentos, status: vetor);
-var
-    i, homens: longint;
+  v: vetor;
+  b, n, n_base_B: longint;
+  vetor_eh_valido: boolean;
+  
+function potencia(base, exp: longint): longint;
+var 
+  i, res: longint;
 begin
-    homens := 1000;
-    for i := 1 to 20 do
-    begin
-        regimentos[i] := homens;
-        status[i] := 0;
-        homens := homens - 50;
-    end;    
+  res := 1;
+  
+  for i := 1 to exp do
+    res := res * base;
+  
+  potencia := res;
 end;
 
-function enviar_front(var regimentos: vetor): longint;
-var
-    i, i_maior_regimento: longint;
+function cria_vetor(var v: vetor; b, n_base_B: longint): boolean;
+var 
+  i, digito: longint;
+  res: boolean;
 begin
-    i_maior_regimento := 1;
-    for i := 2 to 20 do
-    begin
-        if (regimentos[i] > regimentos[i_maior_regimento]) then
-            i_maior_regimento := i;
-    end;
-    enviar_front := i_maior_regimento;
-end;
-
-procedure atualizar_regimentos(var regimentos: vetor; enviado: longint);
-var
-    i: longint;
-begin
-    for i := 1 to 20 do
-    begin
-        if (i = 5) then
-            regimentos[i] := regimentos[i] + 30
-        else if (i = enviado) then
-            regimentos[i] := 50
-        else
-            regimentos[i] := regimentos[i] + 100;
-    end;
-end;
-
-procedure atualizar_status(var status: vetor; enviado: longint);
-begin
-    status[enviado] := 1;
-end;
-
-begin
-    semana := 1;
-    inicializar_regimentos(regimentos, status);
+  
+  v[1] := b;
+  res := true;
+  i := 2;
+  
+  while n_base_B <> 0 do
+  begin
+    digito := n_base_B mod 10;
+    n_base_B := n_base_B div 10;
     
-    while (status[5] = 0) do
+    v[i] := digito;
+    
+    if (digito < 0) or (digito > b) then
     begin
-        enviado := enviar_front(regimentos);
-        writeln('======= Semana ', semana, ' =======');
-        writeln('O regimento ', enviado, ' foi para o front com ', regimentos[enviado], ' homens');
-        writeln('-------- Status --------');
-        
-        for i := 1 to 20 do
-        begin
-            if (status[i] = 0) then
-              writeln('Regimento ', i:2, ' (', regimentos[i], ' homens)', ': a enviar')
-            else
-              writeln('Regimento ', i:2, ' (', regimentos[i], ' homens)', ': enviado')
-        end;
-
-        atualizar_regimentos(regimentos, enviado);
-        atualizar_status(status, enviado);
-        semana := semana + 1;
+      res := false;
+      break;
     end;
     
-    writeln('O regimento 5 foi para o front em ', semana - 1, ' semanas.');
+    i := i + 1;
+  end;
+  
+  cria_vetor := res;
+end;
+
+function processa_valores_vetor(var v: vetor; b, tam: longint): longint;
+var
+  i, base, exp, soma: longint;
+begin
+  base := b;
+  exp := 0;
+  soma := 0;
+  for i := 2 to (tam + 1) do
+  begin
+    soma := soma + (potencia(base, exp) * v[i]);
+    exp := exp + 1;
+  end;
+  
+  processa_valores_vetor := soma;
+end;
+
+begin
+  read(b);
+  read(n);
+  read(n_base_B);
+  vetor_eh_valido := cria_vetor(v, b, n_base_B);
+  
+  if (vetor_eh_valido) then
+    writeln(processa_valores_vetor(v, b, n))
+  else
+    writeln(-1);
 end.
- 
