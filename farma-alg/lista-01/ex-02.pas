@@ -1,3 +1,8 @@
+{*
+Faça um programa Pascal que leia dois números inteiros e imprima
+a média aritmética inteira entre eles.
+*} 
+
 program media_aritmetica;
 var 
     numero_1, numero_2: integer;
