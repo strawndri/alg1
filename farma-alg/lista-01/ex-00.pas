@@ -1,5 +1,7 @@
 {* 
-Faça um programa Pascal que leia do teclado dois valores reais x e y, e em seguida calcule e imprima o valor da seguinte expressão com três casas decimais.
+Faça um programa Pascal que leia do teclado dois valores reais x e y, 
+e em seguida calcule e imprima o valor da seguinte expressão com 
+três casas decimais.
 *}
 
 program exercicio_080;
