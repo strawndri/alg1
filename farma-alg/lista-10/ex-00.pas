@@ -1,3 +1,22 @@
+{*
+Uma matriz D(8 × 8) pode representar a posiçao atual de um jogo de damas, sendo que
+0 indica uma casa vazia, 1 indica uma casa ocupada por uma peça branca e -1 indica 
+uma casa ocupada por uma peça preta. Supondo que as peças pretas estão se movendo 
+no sentido crescente das linhas da matriz D, determinar as posições das peças pretas que:
+
+ - podem tomar peças brancas;
+ - podem mover-se sem tomar peças brancas;
+ - não podem se mover.
+
+A prioridade na ação é sempre tomar uma peça, ou seja, em uma situação na qual 
+uma peça preta possa tanto "mover" quanto "tomar", esta peça é marcada como "tomar". 
+Cada peça só pode ser marcada com uma ação.
+
+Para este exercício, considere que as peças pretas nunca estarão na última linha do
+jogo (dama). Caso não ocorra peça para algum dos movimentos possíveis exibir o valor
+0 (zero) ao invés da posição.
+*}
+
 program damas;
 const n = 8;
 type

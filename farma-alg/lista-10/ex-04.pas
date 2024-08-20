@@ -1,3 +1,11 @@
+{*
+Seguindo o racíocinio do exercício sobre quadrado mágico. Crie um programa em Free Pascal
+que leia um inteiro n que representa o tamanho do lado de uma matriz A e uma matriz 
+A(n x n) que representa o quadrado e imprima quantas matrizes não triviais (isto é, não
+pode ser a matriz que é constituida por apenas um elemento, uma linha e uma coluna) 
+formam um quadrado mágico a partir da matriz fornecida.
+*}
+
 program quadrado_magico_2;
 type matriz = array[1..100, 1..100] of longint;
 var

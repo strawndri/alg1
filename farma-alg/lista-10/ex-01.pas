@@ -1,3 +1,16 @@
+{*
+Um vetor real X com n elementos é apresentado como resultado de um sistema de equações 
+lineares Ax = B cujos coeficientes são representados em uma matriz real A(m×n) e os 
+lados direitos das equações (os resultados de cada equação) em um vetor real B de m 
+elementos. Criar um programa em Free Pascal que verifique se o vetor X é realmente 
+solução do sistema dado, imprimindo "sim" caso o vetor informado seja solução do 
+sistema de equações, ou imprimindo "não" caso contrário.
+
+Dica: Comparações entre números reais pode ser um problema dependendo da arquitetura
+da máquina a ser utilizada. Para solucionar este problema um método a ser utilizado
+é a comparação por margem de erro.
+*}
+
 program quadrado_magico_1;
 type 
     matriz = array[1..100, 1..100] of real;

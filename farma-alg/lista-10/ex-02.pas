@@ -1,3 +1,10 @@
+{*
+Um jogo de palavras cruzadas pode ser representado por uma matriz A(n × m) onde cada 
+posição da matriz corresponde a um quadrado do jogo, sendo que 0 indica um quadrado 
+em branco e -1 indica um quadrado preto. Colocar as numerações de início de palavras 
+horizontais e/ou verticais nos quadrados correspondentes (substituindo os zeros), 
+considerando que uma palavra deve ter pelo menos duas letras.
+*}
 program palavras_cruzadas;
 type 
     matriz = array[1..100, 1..100] of longint;
