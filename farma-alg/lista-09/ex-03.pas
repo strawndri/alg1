@@ -1,3 +1,13 @@
+{*
+Faça um programa em Free Pascal que leia dois inteiros positivos m e n, sendo
+1 ≤ m, n ≤ 100, e uma matriz A m×n . O programa deve imprimir “sim” se há elementos 
+repetidos na matriz A, caso contrário deve imprimir “nao”. Nos casos de teste cada 
+elemento x da matriz A é definido por 1 ≤ x ≤ 1000.
+
+PS: Seu programa deve encerrar a execução assim que descobrir se a propriedade 
+definida foi atendida ou não. 
+*}
+
 program repeticao_em_matriz;
 type matriz = array [1..100, 1..100] of longint;
 var

@@ -1,3 +1,17 @@
+{*
+Uma matriz inteira A n×n é considerada uma matriz de permutação se em cada linha
+e em cada coluna houver n - 1 elementos nulos e um único elemento igual a 1.
+
+Faça um programa em Free Pascal que leia um inteiro positivo n, sendo 1 ≤ m, n ≤ 100, 
+e uma matriz inteira A n×n . O programa deve imprimir “sim” caso a matriz A seja de 
+permutação, caso contrário deve imprimir “nao”.
+
+Nos casos de teste cada elemento x da matriz A é definido por 0 ≤ x ≤ 100.
+
+PS: Seu programa deve encerrar a execução assim que descobrir se a propriedade 
+definida foi atendida ou não. 
+*}
+
 program permutacao_em_matriz;
 type matriz = array[1..100, 1..100] of longint;
 var
