@@ -1,3 +1,11 @@
+{*
+Faça um programa em Free Pascal que leia diversas linhas nas quais as linhas ímpares 
+contém o tamanho n (0 ≤ n ≤ 100) da sequência de números inteiros que deve ser lida na 
+linha subsequente. Quando uma linha ímpar contiver o valor zero significa que a entrada 
+de dados acabou e seu programa deverá encerrar com a impressão de todas as sequências 
+originais e também compactadas pela eliminação de todos os elementos repetidos de cada sequência. 
+*}
+
 program compactacao;
 type vetor = array[1..100] of longint;
 var
@@ -10,46 +18,6 @@ var
 begin
   for i := 1 to n do
     read(v[i]);
-end;
-
-procedure ordena_vetor(var v: vetor; n: longint);
-var
-    i, j, aux: longint;
-begin
-    for i := 1 to n do
-    begin
-        aux := v[i];
-        j := i - 1;
-        while (j >= 1) and (v[j] > aux) do
-        begin
-            v[j + 1] := v[j];
-            j := j - 1;
-        end;
-        v[j + 1] := aux;
-    end;
-end;
-
-function busca(var v: vetor; n, x: longint): boolean;
-var 
-  inicio, meio, fim: longint;
-begin
-  inicio := 1;
-  fim := n;
-  meio := (inicio + fim) div 2;
-  
-  while (fim >= inicio) and (v[meio] <> x) do
-  begin
-    if (v[meio] > x) then
-      fim := meio -1
-    else
-      inicio := meio + 1;
-    meio := (inicio + fim) div 2;
-  end;
-  
-  if inicio <= fim then
-    busca := true
-  else
-    busca := false;
 end;
 
 procedure cria_vetor_compacto(var v, v_compacto: vetor; var n, j: longint);
@@ -69,7 +37,7 @@ begin
         break;
       end;
     end;
-    
+
     if not duplicado then
     begin
       j := j + 1;
@@ -88,22 +56,22 @@ end;
 
 begin
   read(n);
-  
+
   while (n <> 0) do
   begin
     ler_vetor(v, n);
-    
+
     FillChar(v_compacto, SizeOf(v_compacto), 0);
     cria_vetor_compacto(v, v_compacto, n, j);
-    
+
     write('O: ');
     imprimir_vetor(v, n);
     writeln();
-    
+
     write('C: ');
     imprimir_vetor(v_compacto, j);
     writeln();
-    
+
     read(n);
   end;
 end.

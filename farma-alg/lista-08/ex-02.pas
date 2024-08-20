@@ -1,3 +1,10 @@
+{*
+Fazer um programa em Free Pascal que leia do teclado dois números naturais 0 < n, m ≤ 100. 
+Em seguida, leia duas sequências de respectivamente n e m números também naturais, 
+sendo garantidamente m < n. Seu programa deve determinar quantas vezes a segunda
+sequência ocorre na primeira.
+*}
+
 program ocorrencias;
 type vetor = array[1..100] of longint;
 var

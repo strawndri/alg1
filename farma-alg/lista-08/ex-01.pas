@@ -1,3 +1,9 @@
+{*
+Faça um programa em Free Pascal que leia um número natural 0 < n ≤ 100 e em seguida 
+leia uma sequência de n números inteiros. Seu programa deve determinar o valor do 
+subsequência que maximize a soma dos seus elementos.
+*}
+
 program maximizar_soma;
 type vetor = array[1..100] of longint;
 var

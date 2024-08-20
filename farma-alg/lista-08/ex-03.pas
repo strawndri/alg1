@@ -1,3 +1,15 @@
+{*
+Faça um programa em Free Pascal que leia um número natural 0 < n ≤ 100 e em seguida leia
+uma sequência de n números também naturais. Seu programa deve verificar se existem
+duas subsequências iguais nesta sequência com tamanho pelo menos 2. O tamanho da 
+sequência encontrada deverá ser máximo, se ela existir. Caso exista, seu programa 
+deve imprimir o valor do ı́ndice i e do tamanho máximo da sequência m, nesta ordem, 
+onde i é a primeira ocorrência da sequência que possui uma cópia na sequência original 
+e m é o tamanho desta sequência que se repete. Caso contrário seu programa deve imprimir "nenhuma".
+
+Os casos de teste não conterão entradas com mais de uma subsequência igual.
+*}
+
 program subsequencia;
 
 const MAX = 100;

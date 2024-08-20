@@ -1,3 +1,19 @@
+{*
+É comum em editores de texto que você deseje substituir um pedaço do texto por outro
+pedaço, normalmente uma palavra por outra. Este problema simula esta situação com 
+números, para facilitar.
+
+Escreva um programa em Free Pascal que leia três sequências de números inteiros 
+terminadas em zero (os zeros não devem ser processados). Imagine que a primeira 
+sequência é o texto completo, a segunda é a palavra que você deseja substituir 
+pela terceira. Considere que o usuário nunca vai digitar mais do que 100 números antes 
+de cada zero. A entrada de dados garante que a segunda sequência tem no máximo tantos 
+elementos quanto a primeira. Seu programa deve determinar se a primeira ocorrência da 
+segunda sequência está contida na primeira e em caso afirmativo, deve substituı́-la pela 
+terceira sequência. Ao final, seu programa deve imprimir a primeira sequência após a 
+substituição, caso tenha havido alguma. Caso contrário seu programa deve imprimir "vazia".
+*}
+
 program substituicao;
 type vetor = array [1..100] of longint;
 var
