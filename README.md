@@ -1,7 +1,7 @@
 # 🧮| Exercícios de Algoritmos e Estruturas de Dados I
 
 ![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-f5b5ca.svg)
-![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-F8EE77.svg)
+![Status](https://img.shields.io/badge/Status-Concluído-abf285.svg)
 
 ## Índice
 
@@ -11,7 +11,7 @@
 
 ## Sobre o repositório
 
-Este repositório contém todos os exercícios realizados ao longo da Disciplina de **Algoritmos e Estrutura de Dados I**, vista a partir do curso de Ciência da Computação da Universidade Federal do Paraná. Para explorar assuntos como **lógica de programação**, **estrutura de dados elementares**, **noções de complexidade**, **refinamentos sucessivos** e **noções de tipos abstratos de dados**, foi utilizada a linguagem de programação *Pascal*.
+Este repositório contém todos os exercícios realizados ao longo da Disciplina de **Algoritmos e Estrutura de Dados I**, vista a partir do curso de Ciência da Computação da Universidade Federal do Paraná. Para explorar assuntos como **lógica de programação**, **estrutura de dados elementares**, **noções de complexidade**, **refinamentos sucessivos** e **noções de tipos abstratos de dados**, foi utilizada a linguagem de programação _Pascal_.
 
 ## Tecnologias utilizadas
 
